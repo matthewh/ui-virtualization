@@ -200,11 +200,6 @@ System.register(['aurelia-templating-resources', './utilities'], function (_expo
           var viewCount = repeat.viewCount();
           var viewAddIndex = void 0;
           var removeMoreThanInDom = removedLength > viewCount;
-          if (repeat._viewsLength <= j) {
-            repeat._bottomBufferHeight = repeat._bottomBufferHeight - repeat.itemHeight;
-            repeat._adjustBufferHeights();
-            return;
-          }
 
           if (!this._isIndexBeforeViewSlot(repeat, viewSlot, collectionIndex) && !this._isIndexAfterViewSlot(repeat, viewSlot, collectionIndex)) {
             var viewIndex = this._getViewIndex(repeat, viewSlot, collectionIndex);
