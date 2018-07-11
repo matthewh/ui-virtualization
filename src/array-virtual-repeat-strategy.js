@@ -168,11 +168,6 @@ export class ArrayVirtualRepeatStrategy extends ArrayRepeatStrategy {
     let viewCount = repeat.viewCount();
     let viewAddIndex;
     let removeMoreThanInDom = removedLength > viewCount;
-    if (repeat._viewsLength <= j) {
-      repeat._bottomBufferHeight = repeat._bottomBufferHeight - (repeat.itemHeight);
-      repeat._adjustBufferHeights();
-      return;
-    }
 
     // index in view slot?
     if (!this._isIndexBeforeViewSlot(repeat, viewSlot, collectionIndex) && !this._isIndexAfterViewSlot(repeat, viewSlot, collectionIndex)) {
